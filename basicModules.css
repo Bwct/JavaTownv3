@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+img {
+user-drag: none; 
+user-select: none;
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+/* Basic Concepts*/
+.margin {
+    margin: 10% 0;
+}
+
+
+.parallax {
+    background: url("moduleImg/basicConceptsImg/livingRoom.png") repeat fixed 50%;
+    background-size: contain;
+}
+
+.parallax-inner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.sliderCont {
+    width: 70%;
+    height: 500px;
+    position: relative;
+    background-color: rgba(10, 0, 0, 0.5);
+    border: solid 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slider_img {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+}
+.slider_img img {
+    width: 100%;
+    height: 100%;
+}
+#c1, #c2, #c3 {
+    display: none;
+
+}
+
+.pre, .next {
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(88, 88, 88, 0.4);
+    z-index: 99;
+    cursor: pointer;
+}
+
+.pre {
+    left: 0;
+    opacity: 0;
+    transition: 0.9 ease;
+}
+.next {
+    right: 0;
+    opacity: 0;
+    transition: 0.9 ease;
+}
+.pre:hover, .next:hover {
+    opacity: 1;
+}
+.navDots {
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+
+}
+.dots {
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(102, 67, 44, 0.6);
+}
+.slider_img {
+    z-index: -1;
+}
+
+#c1:checked ~ #one,
+#c2:checked ~ #two,
+#c3:checked ~ #three {
+    z-index: 9;
+}
+#c1:checked ~ .navDots #dot1,
+#c2:checked ~ .navDots #dot2,
+#c3:checked ~ .navDots #dot3 {
+    background:rgba(218, 95, 13, 0.87);
+
+}
+.dots:hover {
+    cursor: pointer;
+}
